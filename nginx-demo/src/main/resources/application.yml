@@ -1,0 +1,8 @@
+ftp:
+  host: 自己服务器ip
+  userName: 服务器账号
+  password: 服务器密码
+  port: 22
+  rootPath: /usr/nginx/image
+  img:
+    url: http://ip:9090/
