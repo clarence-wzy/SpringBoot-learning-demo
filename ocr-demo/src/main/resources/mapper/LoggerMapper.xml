@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wzy.log.mapper.LogMapper">
+
+    <insert id="insertLog" parameterType="com.wzy.log.entity.Log">
+        insert into sys_log
+            (log_id,type,title,remote_addr,request_uri,method,params,exception,user_id,operate_date,timeout)
+        value
+            (#{logId},#{type},#{title},#{remoteAddr},#{requestUri},#{method},#{params},#{exception},#{userId},#{operateDate},#{timeout})
+    </insert>
+
+    <select id="getLogsByUserId" resultType="com.wzy.log.entity.Log">
+        select log_id,type,title,remote_addr,operate_date from sys_log where user_id = #{userId} order by operate_date desc limit 5;
+    </select>
+
+</mapper>

@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/practice?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Hongkong
+    #驼峰命名
+    map-underscore-to-camel-case: true
+    #开启列标签代替列名
+    use-column-label: true
