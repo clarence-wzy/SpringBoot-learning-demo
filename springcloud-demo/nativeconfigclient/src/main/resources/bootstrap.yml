@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: dev
+  cloud:
+    config:
+      fail-fast: true
+      uri: http://localhost:8762

@@ -1,0 +1,12 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: nativeconfigserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared   #定义配置文件存储在本地，区别于存储在git仓库
